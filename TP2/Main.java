@@ -5,63 +5,63 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Diccionario<String> dic = new Diccionario<>();
-        int opcion;
+        int opt;
 
         do {
-            System.out.println("========== MENU ==========");
-            System.out.println("1- Crear diccionario");
-            System.out.println("2- Tamaño");
-            System.out.println("3- Existe elemento");
-            System.out.println("4- Obtener elemento");
-            System.out.println("5- Eliminar elemento");
-            System.out.println("6- Agregar elemento");
-            System.out.println("7- Salir");
-            System.out.print("Ingrese una opcion: ");
-            opcion = sc.nextInt();
+            System.out.println(" menu diccionario ");
+            System.out.println("1- crear diccionario");
+            System.out.println("2- tamaño");
+            System.out.println("3- existe elemento");
+            System.out.println("4- obtener elemento");
+            System.out.println("5- eliminar elemento");
+            System.out.println("6- agregar elemento");
+            System.out.println("7- salir");
+            System.out.print("ingrese una opcion: ");
+            opt = sc.nextInt();
             sc.nextLine();
 
-            if (opcion == 1) {
+            if (opt == 1) {
                 dic = new Diccionario<>();
-                System.out.println("Diccionario creado (vacío)");
-            } else if (opcion == 2) {
+                System.out.println("diccionario creado ");
+            } else if (opt == 2) {
                 int cantidad = dic.tamaño();
-                System.out.println("El diccionario tiene " + cantidad + " elemento/s");
-            } else if (opcion == 3) {
-                System.out.print("Ingrese la clave: ");
-                String key = sc.nextLine();
-                boolean esta = dic.existeElemento(key);
+                System.out.println("el diccionario tiene " + cantidad + " elemento(s)");
+            } else if (opt == 3) {
+                System.out.print("ingrese la clave: ");
+                String id = sc.nextLine();
+                boolean esta = dic.existeElemento(id);
                 if (esta == true) {
-                    System.out.println("La clave " + key + " existe");
+                    System.out.println("la clave " + id + " existe");
                 } else {
-                    System.out.println("La clave " + key + " NO existe");
+                    System.out.println("la clave " + id + " no existe");
                 }
-            } else if (opcion == 4) {
-                System.out.print("Ingrese la clave: ");
-                String key = sc.nextLine();
-                String valor = dic.obtenerElemento(key);
+            } else if (opt == 4) {
+                System.out.print("ingrese la clave: ");
+                String id = sc.nextLine();
+                String valor = dic.obtenerElemento(id);
                 if (valor != null) {
-                    System.out.println("El valor de " + key + " es: " + valor);
+                    System.out.println("el valor de " + id + " es " + valor);
                 } else {
-                    System.out.println("No hay ningun valor para la clave " + key);
+                    System.out.println("no hay ningun valor para la clave " + id);
                 }
-            } else if (opcion == 5) {
-                System.out.print("Ingrese la clave: ");
-                String key = sc.nextLine();
-                dic.eliminarElemento(key);
-                System.out.println("Se elimino la clave " + key + " (si existia)");
-            } else if (opcion == 6) {
-                System.out.print("Ingrese la clave: ");
-                String key = sc.nextLine();
-                System.out.print("Ingrese el valor: ");
+            } else if (opt == 5) {
+                System.out.print("ingrese la clave: ");
+                String id = sc.nextLine();
+                dic.eliminarElemento(id);
+                System.out.println("se elimino la clave " + id );
+            } else if (opt == 6) {
+                System.out.print("ingrese la clave: ");
+                String id = sc.nextLine();
+                System.out.print("ingrese el valor: ");
                 String valor = sc.nextLine();
-                dic.agregarElemento(key, valor);
-                System.out.println("Se agrego el valor para la clave " + key);
-            } else if (opcion == 7) {
-                System.out.println("Chau!");
+                dic.agregarElemento(id, valor);
+                System.out.println("se agrego el valor para la clave " + id);
+            } else if (opt == 7) {
+                System.out.println("chau profe");
             } else {
-                System.out.println("Opcion invalida");
+                System.out.println("opcion no valida");
             }
             System.out.println("");
-        } while (opcion != 7);
+        } while (opt != 7);
     }
 }

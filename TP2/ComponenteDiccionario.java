@@ -1,19 +1,19 @@
 public class ComponenteDiccionario<T> {
 
-    private String clave;
+    private String id;
     private T elemento;
 
-    public ComponenteDiccionario(String clave, T elemento) {
-        this.clave = clave;
+    public ComponenteDiccionario(String id, T elemento) {
+        this.id = id;
         this.elemento = elemento;
     }
 
     public String getClave() {
-        return clave;
+        return id;
     }
 
-    public void setClave(String clave) {
-        this.clave = clave;
+    public void setClave(String id) {
+        this.id = id;
     }
 
     public T getElemento() {
@@ -24,9 +24,9 @@ public class ComponenteDiccionario<T> {
         this.elemento = elemento;
     }
 
-    @Override
+    
     public String toString() {
-        String s = "Clave: " + clave + " - Elemento: " + elemento;
+        String s = "Clave: " + id + " - Elemento: " + elemento;
         return s;
     }
 }
