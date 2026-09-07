@@ -1,3 +1,9 @@
+// INTEGRANTES:
+// - Carlos Tadeo Ferreira Alderete
+// - Giovanni Luis Roche Arguello
+
+
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
